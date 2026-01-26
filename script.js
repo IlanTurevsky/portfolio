@@ -118,11 +118,11 @@ document.querySelectorAll('.video-container').forEach(container => {
         if (video.paused) {
             video.play();
             container.classList.remove('paused');
-            playIcon.textContent = '▶';
+            playIcon.textContent = '❚❚';
         } else {
             video.pause();
             container.classList.add('paused');
-            playIcon.textContent = '❚❚';
+            playIcon.textContent = '▶';
         }
     });
 });
