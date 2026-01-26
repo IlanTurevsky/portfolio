@@ -345,6 +345,14 @@ img {
     border: 1px solid var(--border);
 }
 
+.profile-image {
+    width: 280px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
 /* ===== Skills Section ===== */
 .skills {
     background: var(--bg-secondary);
