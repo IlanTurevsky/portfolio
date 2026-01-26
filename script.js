@@ -109,6 +109,24 @@ window.addEventListener('load', () => {
 });
 */
 
+// ===== Video Play/Pause Toggle =====
+document.querySelectorAll('.video-container').forEach(container => {
+    const video = container.querySelector('.project-video');
+    const playIcon = container.querySelector('.play-icon');
+
+    container.addEventListener('click', () => {
+        if (video.paused) {
+            video.play();
+            container.classList.remove('paused');
+            playIcon.textContent = '▶';
+        } else {
+            video.pause();
+            container.classList.add('paused');
+            playIcon.textContent = '❚❚';
+        }
+    });
+});
+
 // ===== Console Easter Egg =====
 console.log('%c👋 Hey there, curious developer!', 'font-size: 20px; font-weight: bold;');
 console.log('%cThanks for checking out my portfolio. Want to connect? Reach out!', 'font-size: 14px;');
