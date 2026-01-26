@@ -350,7 +350,7 @@ img {
     height: 320px;
     object-fit: cover;
     border-radius: 20px;
-    border: 2px solid var(--accent);
+    border: 4px solid #000000;
 }
 
 /* ===== Skills Section ===== */
