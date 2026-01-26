@@ -320,9 +320,9 @@ img {
     top: 20px;
     left: 20px;
     width: 280px;
-    height: 280px;
+    height: 320px;
     border: 2px solid var(--accent);
-    border-radius: 50%;
+    border-radius: 20px;
     z-index: -1;
     transition: all var(--transition);
 }
@@ -347,9 +347,9 @@ img {
 
 .profile-image {
     width: 280px;
-    height: 280px;
+    height: 320px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 20px;
     border: 2px solid var(--accent);
 }
 
