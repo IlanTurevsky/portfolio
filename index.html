@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilan Turevskiy | Portfolio
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">IT</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-wrapper">
+        <div class="hero-background">
+            <div class="hero-bg-image mit"></div>
+            <div class="hero-bg-image harvard"></div>
+            <div class="hero-bg-overlay"></div>
+        </div>
+        <header class="hero">
+            <div class="hero-content">
+                <p class="hero-greeting">Hi, my name is</p>
+                <h1 class="hero-name">Ilan Turevskiy</h1>
+                <h2 class="hero-tagline">I build robots and intelligent systems.</h2>
+                <p class="hero-description">
+                    I'm a high school student passionate about AI, robotics, and data science.
+                    Currently building prosthetic hands, exploring machine learning, and competing with the #1 ranked drone team in the nation.
+                </p>
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+            </div>
+        </header>
+    </div>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title"><span class="title-number">01.</span> About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Hello! I'm Ilan, a sophomore at Belmont Hill School in Belmont, MA.
+                        I'm passionate about building things that solve real problems—from robotic prosthetics
+                        to autonomous vehicles to video games.
+                    </p>
+                    <p>
+                        My journey into tech started with curiosity about how things work. That curiosity
+                        led me to build an autonomous follow-bot in 8th grade, and now I'm designing
+                        prosthetic hands with flex sensors and servo motors.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me sailing competitively (3 years varsity),
+                        wrestling, or working with my drone team—currently ranked #1 nationally.
+                        I'm also diving deep into AI and machine learning through an independent study
+                        and looking forward to potential research opportunities at MIT and Harvard Medical School.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <div class="image-placeholder">Your Photo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title"><span class="title-number">02.</span> Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>Java (AP CSA)</li>
+                        <li>C#</li>
+                        <li>MATLAB → Python</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>AI & Data</h3>
+                    <ul class="skill-list">
+                        <li>Machine Learning</li>
+                        <li>Data Analysis</li>
+                        <li>Data Visualization</li>
+                        <li>Algorithmic Thinking</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Hardware</h3>
+                    <ul class="skill-list">
+                        <li>Raspberry Pi Pico</li>
+                        <li>Servo Motors</li>
+                        <li>Flex Sensors</li>
+                        <li>Embedded Systems</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Other</h3>
+                    <ul class="skill-list">
+                        <li>Robotics</li>
+                        <li>Game Development</li>
+                        <li>Drone Engineering</li>
+                        <li>Precalculus Math</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title"><span class="title-number">03.</span> Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">Prosthetic Hand</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Robotic Prosthetic Hand</h3>
+                        <p class="project-description">
+                            Designed and built a functional robotic prosthetic hand using a Raspberry Pi Pico.
+                            Integrated flex sensors into a glove to measure finger movement via resistance changes,
+                            mapping each sensor to servo motors to replicate natural hand motion.
+                            Future expansion planned using myoelectric (EMG) sensors.
+                        </p>
+                        <ul class="project-tech">
+                            <li>Raspberry Pi Pico</li>
+                            <li>Flex Sensors</li>
+                            <li>Servo Motors</li>
+                            <li>Python</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                            <a href="#" class="project-link" aria-label="External Link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">Follow Bot</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Autonomous Follow Bot</h3>
+                        <p class="project-description">
+                            Built an autonomous car that can navigate independently and follow a target.
+                            Implemented sensor-based navigation and control logic to detect obstacles
+                            and track movement. Developed as an 8th grade computer science project.
+                        </p>
+                        <ul class="project-tech">
+                            <li>Robotics</li>
+                            <li>Sensors</li>
+                            <li>Control Systems</li>
+                            <li>Embedded</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                            <a href="#" class="project-link" aria-label="External Link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">Video Game</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Published Video Game</h3>
+                        <p class="project-description">
+                            Designed and developed an original video game during a game development internship.
+                            Published the game online for public access. Gained hands-on experience in
+                            project planning, iteration, and deployment workflows.
+                        </p>
+                        <ul class="project-tech">
+                            <li>Game Dev</li>
+                            <li>C#</li>
+                            <li>Design</li>
+                            <li>Deployment</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                            <a href="#" class="project-link" aria-label="External Link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title"><span class="title-number">04.</span> Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>Independent Study <span class="company">@ Belmont Hill School</span></h3>
+                            <p class="experience-date">Current</p>
+                        </div>
+                        <ul class="experience-details">
+                            <li>School-approved independent study in AI, Data Analytics, and Python</li>
+                            <li>Focused on applied data analysis and machine learning concepts</li>
+                            <li>Building practical projects with real-world applications</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>Drone Club Member <span class="company">@ Belmont Hill School</span></h3>
+                            <p class="experience-date">Current</p>
+                        </div>
+                        <ul class="experience-details">
+                            <li>Member of team currently ranked #1 nationally</li>
+                            <li>Focus on drone engineering, flight, and applied technology</li>
+                            <li>Collaborate with teammates on competitive challenges</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>Sustainability Club <span class="company">@ Belmont Hill School</span></h3>
+                            <p class="experience-date">Current</p>
+                        </div>
+                        <ul class="experience-details">
+                            <li>Conduct data analysis on school energy usage</li>
+                            <li>Collected and graphed natural gas and electricity emissions</li>
+                            <li>Helped identify efficiency trends across campus buildings</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>Game Development Intern <span class="company">@ Internship</span></h3>
+                            <p class="experience-date">Previous</p>
+                        </div>
+                        <ul class="experience-details">
+                            <li>Designed and developed an original video game from concept to completion</li>
+                            <li>Published the game online for public access</li>
+                            <li>Gained experience in project planning, iteration, and deployment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="section research">
+        <div class="container">
+            <h2 class="section-title"><span class="title-number">05.</span> Research Interests</h2>
+            <div class="research-grid">
+                <div class="research-card mit-card">
+                    <div class="research-logo">MIT</div>
+                    <h3>MANTIS Lab</h3>
+                    <p class="research-lab">Manolis Kellis Lab</p>
+                    <p class="research-description">
+                        Prospective research internship focusing on data analysis and machine learning
+                        applications in computational biology.
+                    </p>
+                    <span class="research-status">Prospective</span>
+                </div>
+                <div class="research-card harvard-card">
+                    <div class="research-logo">Harvard</div>
+                    <h3>Medical School Research</h3>
+                    <p class="research-lab">Dr. Chris Connor</p>
+                    <p class="research-description">
+                        Research project involving rewriting BIS monitor algorithms from MATLAB to Python
+                        for medical applications.
+                    </p>
+                    <span class="research-status">Prospective</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title"><span class="title-number">06.</span> Contact</h2>
+            <div class="contact-content">
+                <p class="contact-text">
+                    I'm always interested in research opportunities, collaborations, and new projects.
+                    Whether you want to discuss AI, robotics, or just say hi—feel free to reach out!
+                </p>
+                <a href="mailto:turevskiyil@belmonthill.org" class="btn btn-primary btn-large">Say Hello</a>
+                <div class="social-links">
+                    <a href="https://github.com/IlanTurevsky" target="_blank" class="social-link" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ilan-turevskiy-716212394/" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Designed & Built by Ilan Turevskiy</p>
+        <p class="footer-note">Belmont, MA</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
