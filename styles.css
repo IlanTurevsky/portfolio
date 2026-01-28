@@ -875,3 +875,567 @@ img {
         font-size: 1.5rem;
     }
 }
+
+/* ===== ENHANCED INTERACTIVE FEATURES ===== */
+
+/* Loading Screen */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 24px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loader-bar {
+    width: 200px;
+    height: 4px;
+    background: var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.loader-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 4px;
+    animation: loading 1.5s ease-in-out forwards;
+}
+
+@keyframes loading {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    z-index: 10000;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+/* Custom Cursor (Desktop Only) */
+.cursor, .cursor-follower {
+    display: none;
+}
+
+@media (min-width: 1024px) and (pointer: fine) {
+    .cursor {
+        display: block;
+        position: fixed;
+        width: 8px;
+        height: 8px;
+        background: var(--accent);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 10001;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease, background 0.2s ease;
+    }
+
+    .cursor-follower {
+        display: block;
+        position: fixed;
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--accent);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 10000;
+        transform: translate(-50%, -50%);
+        transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+    }
+
+    .cursor.hover {
+        transform: translate(-50%, -50%) scale(2);
+        background: var(--accent-hover);
+    }
+
+    .cursor-follower.hover {
+        width: 48px;
+        height: 48px;
+        border-color: var(--accent-hover);
+    }
+
+    body {
+        cursor: none;
+    }
+
+    a, button, .magnetic {
+        cursor: none;
+    }
+}
+
+/* Particles Background */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 15s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+    25% {
+        transform: translateY(-100px) translateX(50px);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-50px) translateX(-30px);
+        opacity: 0.3;
+    }
+    75% {
+        transform: translateY(-150px) translateX(20px);
+        opacity: 0.5;
+    }
+}
+
+/* Hero Enhancements */
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Typewriter Effect */
+.typewriter {
+    color: var(--text-muted);
+}
+
+.typewriter-cursor {
+    color: var(--accent);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    animation: bounce 2s infinite;
+}
+
+.mouse {
+    width: 24px;
+    height: 40px;
+    border: 2px solid var(--text-muted);
+    border-radius: 12px;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+    0% { opacity: 1; top: 8px; }
+    100% { opacity: 0; top: 20px; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-10px); }
+    60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* Stats Section */
+.stats-section {
+    background: var(--bg-secondary);
+    padding: 60px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    text-align: center;
+}
+
+.stat-item {
+    position: relative;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    line-height: 1;
+}
+
+.stat-suffix {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 40px);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.stat-label {
+    display: block;
+    margin-top: 8px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+/* Enhanced Skills with Progress Bars */
+.skill-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.skill-list li {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 0;
+}
+
+.skill-list li::before {
+    display: none;
+}
+
+.skill-name {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.skill-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 3px;
+    width: 0;
+    transition: width 1s ease-out;
+}
+
+/* Project Card Enhancements */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.project-header .project-title {
+    margin-bottom: 0;
+}
+
+.project-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-muted);
+}
+
+.project-placeholder svg {
+    opacity: 0.5;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(99, 102, 241, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-image {
+    position: relative;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.view-project {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Experience Timeline Enhancements */
+.experience-marker {
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marker-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.marker-pulse {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: var(--accent);
+    border-radius: 50%;
+    opacity: 0;
+    animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.experience-content {
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover .experience-content {
+    transform: translateX(8px);
+    border-color: var(--accent);
+}
+
+/* Research Card Shine Effect */
+.card-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.05),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.research-card:hover .card-shine {
+    left: 100%;
+}
+
+/* Tilt Effect */
+.tilt-effect {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+/* Image Glow Effect */
+.image-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.image-wrapper:hover .image-glow {
+    opacity: 1;
+}
+
+/* Contact Button Enhancement */
+.btn-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-large svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-large:hover svg {
+    transform: translateX(4px);
+}
+
+/* Magnetic Button Effect Base */
+.magnetic {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Animate on Scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger Animation Delays */
+.animate-on-scroll[data-delay="100"] { transition-delay: 0.1s; }
+.animate-on-scroll[data-delay="200"] { transition-delay: 0.2s; }
+.animate-on-scroll[data-delay="300"] { transition-delay: 0.3s; }
+
+/* Social Link Hover */
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-4px) rotate(360deg);
+}
+
+.social-link:hover svg {
+    stroke: white;
+}
+
+/* Hide scroll indicator on mobile */
+@media (max-width: 768px) {
+    .scroll-indicator {
+        display: none;
+    }
+
+    .cursor, .cursor-follower {
+        display: none !important;
+    }
+}
