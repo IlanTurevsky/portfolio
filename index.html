@@ -3,448 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ilan Turevskiy | Portfolio</title>
+    <title>Ilan Turevskiy</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loader">
-        <div class="loader-content">
-            <div class="loader-logo">IT</div>
-            <div class="loader-bar"><div class="loader-progress"></div></div>
-        </div>
-    </div>
-
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-progress"></div>
-
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">IT</a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span></span>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-name">Ilan Turevskiy</a>
+            <div class="nav-links">
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="about.html#contact">Contact</a>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <div class="hero-wrapper">
-        <div class="hero-background">
-            <div class="hero-bg-image mit"></div>
-            <div class="hero-bg-image harvard"></div>
-            <div class="hero-bg-overlay"></div>
-            <!-- Floating Particles -->
-            <div class="particles" id="particles"></div>
-        </div>
-        <header class="hero">
+    <main>
+        <!-- Hero Section with Carousel -->
+        <section class="hero">
+            <div class="carousel">
+                <div class="carousel-slide active" data-project="prosthetic">
+                    <div class="carousel-bg"></div>
+                </div>
+                <div class="carousel-slide" data-project="followbot">
+                    <div class="carousel-bg"></div>
+                </div>
+                <div class="carousel-slide" data-project="game">
+                    <div class="carousel-bg"></div>
+                </div>
+            </div>
+
             <div class="hero-content">
-                <p class="hero-greeting animate-on-scroll">Hi, my name is</p>
-                <h1 class="hero-name animate-on-scroll">Ilan Turevskiy</h1>
-                <h2 class="hero-tagline">
-                    <span class="typewriter" data-text='["I build robots and intelligent systems.", "I explore AI and machine learning.", "I create solutions that matter."]'></span>
-                    <span class="typewriter-cursor">|</span>
-                </h2>
-                <p class="hero-description animate-on-scroll">
-                    I'm a high school student passionate about AI, robotics, and data science.
-                    Currently building prosthetic hands, exploring machine learning, and competing with the #1 ranked drone team in the nation.
-                </p>
-                <div class="hero-buttons animate-on-scroll">
-                    <a href="#projects" class="btn btn-primary magnetic">View My Work</a>
-                    <a href="#contact" class="btn btn-outline magnetic">Get In Touch</a>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <span>Scroll Down</span>
-            </div>
-        </header>
-    </div>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="3">0</span>
-                    <span class="stat-label">Major Projects</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="4">0</span>
-                    <span class="stat-label">Programming Languages</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="1">0</span>
-                    <span class="stat-label">National Ranking</span>
-                    <span class="stat-suffix">#</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="3">0</span>
-                    <span class="stat-label">Years Varsity Sailing</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="section about">
-        <div class="container">
-            <h2 class="section-title"><span class="title-number">01.</span> About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="animate-on-scroll">
-                        Hello! I'm Ilan, a sophomore at Belmont Hill School in Belmont, MA.
-                        I'm passionate about building things that solve real problems—from robotic prosthetics
-                        to autonomous vehicles to video games.
+                <div class="hero-intro">
+                    <p class="hero-greeting">
+                        <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
                     </p>
-                    <p class="animate-on-scroll">
-                        My journey into tech started with curiosity about how things work. That curiosity
-                        led me to build an autonomous follow-bot in 8th grade, and now I'm designing
-                        prosthetic hands with flex sensors and servo motors.
-                    </p>
-                    <p class="animate-on-scroll">
-                        When I'm not coding, you'll find me sailing competitively (3 years varsity),
-                        wrestling, or working with my drone team—currently ranked #1 nationally.
-                        I'm also diving deep into AI and machine learning through an independent study
-                        and looking forward to potential research opportunities at MIT and Harvard Medical School.
-                    </p>
+                    <p class="hero-subtitle">Student · Builder · Problem Solver</p>
+                    <h1 class="hero-title">
+                        <span class="carousel-title active" data-index="0">Robotic Prosthetic Hand</span>
+                        <span class="carousel-title" data-index="1">Autonomous Follow Bot</span>
+                        <span class="carousel-title" data-index="2">Published Video Game</span>
+                    </h1>
                 </div>
-                <div class="about-image">
-                    <div class="image-wrapper tilt-effect">
-                        <img src="images/profile.png" alt="Ilan Turevskiy" class="profile-image">
-                        <div class="image-glow"></div>
+
+                <div class="hero-cta">
+                    <a href="projects.html" class="btn-explore">Explore My Work</a>
+                    <a href="about.html" class="btn-secondary">Learn About Me</a>
+                </div>
+            </div>
+
+            <div class="hero-scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-arrow"></div>
+            </div>
+
+            <div class="carousel-nav">
+                <button class="carousel-dot active" data-index="0"></button>
+                <button class="carousel-dot" data-index="1"></button>
+                <button class="carousel-dot" data-index="2"></button>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="intro">
+            <div class="container">
+                <div class="intro-content">
+                    <h2>Hey, I'm Ilan.</h2>
+                    <p>
+                        I'm a sophomore at Belmont Hill School, and I spend most of my free time tinkering with robots,
+                        writing code, and figuring out how to make things work. I got into tech because I was always
+                        curious about what makes stuff tick—that curiosity eventually turned into building actual projects.
+                    </p>
+                    <p>
+                        Right now I'm working on a prosthetic hand that uses flex sensors to mimic finger movements.
+                        It's still a work in progress (lots of trial and error), but I'm learning a ton along the way.
+                        I'm also part of our school's drone team, which has been pretty cool—we're currently ranked
+                        first nationally, though honestly that's more of a team effort than anything I did alone.
+                    </p>
+                    <a href="about.html" class="link-arrow">More about me →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights Section -->
+        <section class="highlights">
+            <div class="container">
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <span class="highlight-number" data-count="3">0</span>
+                        <span class="highlight-label">Years Coding</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">#1</span>
+                        <span class="highlight-label">National Drone Team</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number" data-count="1">0</span>
+                        <span class="highlight-label">Published Game</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">HMS</span>
+                        <span class="highlight-label">Research Collaboration</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills" class="section skills">
-        <div class="container">
-            <h2 class="section-title"><span class="title-number">02.</span> Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category animate-on-scroll" data-delay="0">
-                    <div class="skill-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    </div>
-                    <h3>Languages</h3>
-                    <ul class="skill-list">
-                        <li><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-progress" data-width="90"></div></div></li>
-                        <li><span class="skill-name">Java (AP CSA)</span><div class="skill-bar"><div class="skill-progress" data-width="75"></div></div></li>
-                        <li><span class="skill-name">C#</span><div class="skill-bar"><div class="skill-progress" data-width="70"></div></div></li>
-                        <li><span class="skill-name">MATLAB → Python</span><div class="skill-bar"><div class="skill-progress" data-width="65"></div></div></li>
-                    </ul>
-                </div>
-                <div class="skill-category animate-on-scroll" data-delay="100">
-                    <div class="skill-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 2a10 10 0 0 1 10 10"></path><path d="M12 12l8.5-8.5"></path></svg>
-                    </div>
-                    <h3>AI & Data</h3>
-                    <ul class="skill-list">
-                        <li><span class="skill-name">Machine Learning</span><div class="skill-bar"><div class="skill-progress" data-width="80"></div></div></li>
-                        <li><span class="skill-name">Data Analysis</span><div class="skill-bar"><div class="skill-progress" data-width="85"></div></div></li>
-                        <li><span class="skill-name">Data Visualization</span><div class="skill-bar"><div class="skill-progress" data-width="75"></div></div></li>
-                        <li><span class="skill-name">Algorithmic Thinking</span><div class="skill-bar"><div class="skill-progress" data-width="80"></div></div></li>
-                    </ul>
-                </div>
-                <div class="skill-category animate-on-scroll" data-delay="200">
-                    <div class="skill-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
-                    </div>
-                    <h3>Hardware</h3>
-                    <ul class="skill-list">
-                        <li><span class="skill-name">Raspberry Pi Pico</span><div class="skill-bar"><div class="skill-progress" data-width="85"></div></div></li>
-                        <li><span class="skill-name">Servo Motors</span><div class="skill-bar"><div class="skill-progress" data-width="80"></div></div></li>
-                        <li><span class="skill-name">Flex Sensors</span><div class="skill-bar"><div class="skill-progress" data-width="75"></div></div></li>
-                        <li><span class="skill-name">Embedded Systems</span><div class="skill-bar"><div class="skill-progress" data-width="70"></div></div></li>
-                    </ul>
-                </div>
-                <div class="skill-category animate-on-scroll" data-delay="300">
-                    <div class="skill-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                    </div>
-                    <h3>Other</h3>
-                    <ul class="skill-list">
-                        <li><span class="skill-name">Robotics</span><div class="skill-bar"><div class="skill-progress" data-width="90"></div></div></li>
-                        <li><span class="skill-name">Game Development</span><div class="skill-bar"><div class="skill-progress" data-width="75"></div></div></li>
-                        <li><span class="skill-name">Drone Engineering</span><div class="skill-bar"><div class="skill-progress" data-width="85"></div></div></li>
-                        <li><span class="skill-name">Precalculus Math</span><div class="skill-bar"><div class="skill-progress" data-width="80"></div></div></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Featured Work -->
+        <section class="featured">
+            <div class="container">
+                <h2 class="section-heading">Featured Work</h2>
 
-    <section id="projects" class="section projects">
-        <div class="container">
-            <h2 class="section-title"><span class="title-number">03.</span> Projects</h2>
-            <div class="projects-grid">
-                <article class="project-card animate-on-scroll" data-delay="0">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path></svg>
-                            <span>Prosthetic Hand</span>
+                <div class="featured-grid">
+                    <a href="projects.html#prosthetic" class="featured-card">
+                        <div class="featured-image prosthetic-bg">
+                            <div class="featured-overlay"></div>
                         </div>
-                        <div class="project-overlay">
-                            <span class="view-project">View Project</span>
+                        <div class="featured-info">
+                            <h3>Robotic Prosthetic Hand</h3>
+                            <p>A functional prosthetic that mimics hand movements using flex sensors and servo motors. Still working on adding EMG sensor control.</p>
+                            <span class="featured-link">View Project →</span>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Robotic Prosthetic Hand</h3>
-                            <div class="project-links">
-                                <a href="#" class="project-link magnetic" aria-label="GitHub">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                                </a>
-                                <a href="#" class="project-link magnetic" aria-label="External Link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                                </a>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Designed and built a functional robotic prosthetic hand using a Raspberry Pi Pico.
-                            Integrated flex sensors into a glove to measure finger movement via resistance changes,
-                            mapping each sensor to servo motors to replicate natural hand motion.
-                            Future expansion planned using myoelectric (EMG) sensors.
-                        </p>
-                        <ul class="project-tech">
-                            <li>Raspberry Pi Pico</li>
-                            <li>Flex Sensors</li>
-                            <li>Servo Motors</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
-                </article>
+                    </a>
 
-                <article class="project-card animate-on-scroll" data-delay="100">
-                    <div class="project-image">
-                        <div class="video-container">
-                            <video autoplay muted loop playsinline class="project-video">
+                    <a href="projects.html#followbot" class="featured-card">
+                        <div class="featured-image followbot-bg">
+                            <video autoplay muted loop playsinline>
                                 <source src="images/followbot.mp4" type="video/mp4">
                             </video>
-                            <div class="video-overlay">
-                                <span class="play-icon">❚❚</span>
-                            </div>
+                            <div class="featured-overlay"></div>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Autonomous Follow Bot</h3>
-                            <div class="project-links">
-                                <a href="#" class="project-link magnetic" aria-label="GitHub">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                                </a>
-                                <a href="#" class="project-link magnetic" aria-label="External Link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                                </a>
-                            </div>
+                        <div class="featured-info">
+                            <h3>Autonomous Follow Bot</h3>
+                            <p>An 8th grade project that got me into robotics—a small car that follows you around using sensors. Simple but I was pretty proud of it.</p>
+                            <span class="featured-link">View Project →</span>
                         </div>
-                        <p class="project-description">
-                            Built an autonomous car that can navigate independently and follow a target.
-                            Implemented sensor-based navigation and control logic to detect obstacles
-                            and track movement. Developed as an 8th grade computer science project.
-                        </p>
-                        <ul class="project-tech">
-                            <li>Robotics</li>
-                            <li>Sensors</li>
-                            <li>Control Systems</li>
-                            <li>Embedded</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="project-card animate-on-scroll" data-delay="200">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M12 12h.01"></path><path d="M17 12h.01"></path><path d="M7 12h.01"></path></svg>
-                            <span>Video Game</span>
-                        </div>
-                        <div class="project-overlay">
-                            <span class="view-project">View Project</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Published Video Game</h3>
-                            <div class="project-links">
-                                <a href="#" class="project-link magnetic" aria-label="GitHub">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                                </a>
-                                <a href="#" class="project-link magnetic" aria-label="External Link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                                </a>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Designed and developed an original video game during a game development internship.
-                            Published the game online for public access. Gained hands-on experience in
-                            project planning, iteration, and deployment workflows.
-                        </p>
-                        <ul class="project-tech">
-                            <li>Game Dev</li>
-                            <li>C#</li>
-                            <li>Design</li>
-                            <li>Deployment</li>
-                        </ul>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section experience">
-        <div class="container">
-            <h2 class="section-title"><span class="title-number">04.</span> Experience</h2>
-            <div class="experience-list">
-                <div class="experience-item animate-on-scroll" data-delay="0">
-                    <div class="experience-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-pulse"></div>
-                    </div>
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <h3>Independent Study <span class="company">@ Belmont Hill School</span></h3>
-                            <p class="experience-date">Current</p>
-                        </div>
-                        <ul class="experience-details">
-                            <li>School-approved independent study in AI, Data Analytics, and Python</li>
-                            <li>Focused on applied data analysis and machine learning concepts</li>
-                            <li>Building practical projects with real-world applications</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item animate-on-scroll" data-delay="100">
-                    <div class="experience-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-pulse"></div>
-                    </div>
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <h3>Drone Club Lead Technician <span class="company">@ Belmont Hill School</span></h3>
-                            <p class="experience-date">Current</p>
-                        </div>
-                        <ul class="experience-details">
-                            <li>Member of team currently ranked #1 nationally</li>
-                            <li>Focus on drone engineering, flight, and applied technology</li>
-                            <li>Collaborate with teammates on competitive challenges</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item animate-on-scroll" data-delay="200">
-                    <div class="experience-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-pulse"></div>
-                    </div>
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <h3>Sustainability Club <span class="company">@ Belmont Hill School</span></h3>
-                            <p class="experience-date">Current</p>
-                        </div>
-                        <ul class="experience-details">
-                            <li>Conduct data analysis on school energy usage</li>
-                            <li>Collected and graphed natural gas and electricity emissions</li>
-                            <li>Helped identify efficiency trends across campus buildings</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item animate-on-scroll" data-delay="300">
-                    <div class="experience-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-pulse"></div>
-                    </div>
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <h3>Game Development Intern <span class="company">@ Internship</span></h3>
-                            <p class="experience-date">Previous</p>
-                        </div>
-                        <ul class="experience-details">
-                            <li>Designed and developed an original video game from concept to completion</li>
-                            <li>Published the game online for public access</li>
-                            <li>Gained experience in project planning, iteration, and deployment</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="research" class="section research">
-        <div class="container">
-            <h2 class="section-title"><span class="title-number">05.</span> Research Interests</h2>
-            <div class="research-grid">
-                <div class="research-card mit-card animate-on-scroll tilt-effect" data-delay="0">
-                    <div class="card-shine"></div>
-                    <div class="research-logo">MIT</div>
-                    <h3>MANTIS Lab</h3>
-                    <p class="research-lab">Manolis Kellis Lab</p>
-                    <p class="research-description">
-                        Prospective research internship focusing on data analysis and machine learning
-                        applications in computational biology.
-                    </p>
-                    <span class="research-status">Prospective</span>
-                </div>
-                <div class="research-card harvard-card animate-on-scroll tilt-effect" data-delay="100">
-                    <div class="card-shine"></div>
-                    <div class="research-logo">Harvard</div>
-                    <h3>Medical School Research</h3>
-                    <p class="research-lab">Dr. Chris Connor</p>
-                    <p class="research-description">
-                        Research project involving rewriting BIS monitor algorithms from MATLAB to Python
-                        for medical applications.
-                    </p>
-                    <span class="research-status">Prospective</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section contact">
-        <div class="container">
-            <h2 class="section-title"><span class="title-number">06.</span> Get In Touch</h2>
-            <div class="contact-content animate-on-scroll">
-                <p class="contact-text">
-                    I'm always interested in research opportunities, collaborations, and new projects.
-                    Whether you want to discuss AI, robotics, or just say hi—feel free to reach out!
-                </p>
-                <a href="mailto:turevskiyil@belmonthill.org" class="btn btn-primary btn-large magnetic">
-                    <span>Say Hello</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-                <div class="social-links">
-                    <a href="https://github.com/IlanTurevsky" target="_blank" class="social-link magnetic" aria-label="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/ilan-turevskiy-716212394/" target="_blank" class="social-link magnetic" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+
+                    <a href="projects.html#game" class="featured-card">
+                        <div class="featured-image game-bg">
+                            <div class="featured-overlay"></div>
+                        </div>
+                        <div class="featured-info">
+                            <h3>Published Video Game</h3>
+                            <p>Made a game during an internship last year. Nothing crazy, but it's actually playable and people can download it online.</p>
+                            <span class="featured-link">View Project →</span>
+                        </div>
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="quick-links">
+            <div class="container">
+                <div class="links-grid">
+                    <a href="projects.html" class="link-card">
+                        <span class="link-number">01</span>
+                        <h3>Projects</h3>
+                        <p>Robotics, games, and everything I've built</p>
+                    </a>
+                    <a href="about.html" class="link-card">
+                        <span class="link-number">02</span>
+                        <h3>About</h3>
+                        <p>Who I am, what I do, where I'm headed</p>
+                    </a>
+                    <a href="about.html#contact" class="link-card">
+                        <span class="link-number">03</span>
+                        <h3>Contact</h3>
+                        <p>Get in touch—I'd love to hear from you</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <p>Designed & Built by Ilan Turevskiy</p>
-            <p class="footer-note">Belmont, MA</p>
+        <div class="container">
+            <div class="footer-content">
+                <p>Made by Ilan Turevskiy</p>
+                <div class="footer-links">
+                    <a href="https://github.com/IlanTurevsky" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ilan-turevskiy-716212394/" target="_blank">LinkedIn</a>
+                    <a href="mailto:turevskiyil@belmonthill.org">Email</a>
+                </div>
+            </div>
         </div>
     </footer>
 

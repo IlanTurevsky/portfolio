@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Ilan Turevskiy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header header-light">
+        <nav class="nav">
+            <a href="index.html" class="nav-name">Ilan Turevskiy</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="about.html">About</a>
+                <a href="about.html#contact">Contact</a>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Projects</h1>
+                <p class="page-intro">
+                    Here's a collection of things I've built over the past few years. Some turned out better
+                    than others, but each one taught me something new. I'm always working on something—these
+                    days mostly robotics and AI stuff.
+                </p>
+            </div>
+        </section>
+
+        <!-- Prosthetic Hand Project -->
+        <article id="prosthetic" class="project-detail">
+            <div class="container">
+                <div class="project-header">
+                    <span class="project-category">Robotics / Hardware</span>
+                    <h2>Robotic Prosthetic Hand</h2>
+                    <p class="project-date">2024 – Present</p>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-description">
+                        <p>
+                            This is probably my most ambitious project so far. The idea came from wanting to
+                            understand how prosthetics actually work—I'd seen videos of people with robotic
+                            arms and was curious about the tech behind them.
+                        </p>
+                        <p>
+                            The basic setup: I sewed flex sensors into a glove that I wear on my hand. When I
+                            bend my fingers, the sensors detect the movement through changes in resistance.
+                            That data goes to a Raspberry Pi Pico, which then controls servo motors attached
+                            to a 3D-printed hand. So when I move my real fingers, the prosthetic hand copies
+                            the motion.
+                        </p>
+                        <p>
+                            It's not perfect—there's definitely some lag, and the grip strength could be better.
+                            But it actually works, which honestly surprised me at first. I'm currently trying to
+                            figure out how to add EMG sensors so it could potentially work with actual muscle
+                            signals instead of a glove. That part is harder than I expected.
+                        </p>
+
+                        <h3>What I learned</h3>
+                        <ul>
+                            <li>How to work with microcontrollers and read analog sensor data</li>
+                            <li>PWM signals for controlling servo motors</li>
+                            <li>A lot of patience—hardware projects break constantly</li>
+                            <li>3D printing and basic mechanical design</li>
+                        </ul>
+
+                        <h3>Tech used</h3>
+                        <div class="tech-tags">
+                            <span>Raspberry Pi Pico</span>
+                            <span>Python</span>
+                            <span>Flex Sensors</span>
+                            <span>Servo Motors</span>
+                            <span>3D Printing</span>
+                        </div>
+                    </div>
+
+                    <div class="project-media">
+                        <div class="media-placeholder">
+                            <span>Project Photos Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Follow Bot Project -->
+        <article id="followbot" class="project-detail alt-bg">
+            <div class="container">
+                <div class="project-header">
+                    <span class="project-category">Robotics / Autonomous Systems</span>
+                    <h2>Autonomous Follow Bot</h2>
+                    <p class="project-date">8th Grade (2022)</p>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-description">
+                        <p>
+                            This was my first real robotics project, back in 8th grade. The assignment was
+                            pretty open-ended—just "build something with sensors"—and I decided to make a
+                            little car that could follow me around.
+                        </p>
+                        <p>
+                            The car uses ultrasonic sensors to detect objects in front of it. I wrote some
+                            basic logic so it would turn toward the nearest object (me, hopefully) and try
+                            to maintain a certain distance. It also had obstacle avoidance so it wouldn't
+                            crash into walls.
+                        </p>
+                        <p>
+                            Looking back, the code was pretty messy and the hardware was held together with
+                            tape in some places. But it worked well enough to demo in class, and it's what
+                            got me interested in robotics in the first place. Sometimes simple projects
+                            end up being the most important ones.
+                        </p>
+
+                        <h3>How it works</h3>
+                        <ul>
+                            <li>Ultrasonic sensors scan for nearby objects</li>
+                            <li>Control logic determines which way to turn</li>
+                            <li>Motors adjust speed to maintain following distance</li>
+                            <li>Basic obstacle avoidance prevents collisions</li>
+                        </ul>
+
+                        <h3>Tech used</h3>
+                        <div class="tech-tags">
+                            <span>Arduino</span>
+                            <span>Ultrasonic Sensors</span>
+                            <span>DC Motors</span>
+                            <span>C++</span>
+                        </div>
+                    </div>
+
+                    <div class="project-media">
+                        <video autoplay muted loop playsinline class="project-video">
+                            <source src="images/followbot.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Video Game Project -->
+        <article id="game" class="project-detail">
+            <div class="container">
+                <div class="project-header">
+                    <span class="project-category">Game Development</span>
+                    <h2>Published Video Game</h2>
+                    <p class="project-date">Summer 2023</p>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-description">
+                        <p>
+                            I did a game development internship last summer, and by the end of it I'd
+                            actually made a game that people could play. It's nothing like the big games
+                            you'd buy on Steam, but it was cool to go through the whole process from
+                            start to finish.
+                        </p>
+                        <p>
+                            The hardest part was probably project management—figuring out what features
+                            to cut because I was running out of time, deciding what was "good enough"
+                            to ship. Before this I'd started a bunch of game projects but never actually
+                            finished any of them, so learning to scope things down was really valuable.
+                        </p>
+                        <p>
+                            I used Unity with C#, which was new to me at the time. The game itself is
+                            pretty simple—I don't want to oversell it—but the fact that it's playable
+                            and published online is something I'm proud of.
+                        </p>
+
+                        <h3>What I learned</h3>
+                        <ul>
+                            <li>How to actually finish a project (harder than starting one)</li>
+                            <li>Working with Unity and C# basics</li>
+                            <li>Game design principles and playtesting</li>
+                            <li>Publishing and deployment workflows</li>
+                        </ul>
+
+                        <h3>Tech used</h3>
+                        <div class="tech-tags">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Game Design</span>
+                            <span>itch.io</span>
+                        </div>
+                    </div>
+
+                    <div class="project-media">
+                        <div class="media-placeholder">
+                            <span>Game Screenshots Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Other Work -->
+        <section class="other-work">
+            <div class="container">
+                <h2>Other Stuff I've Worked On</h2>
+                <div class="other-grid">
+                    <div class="other-item">
+                        <h3>Sustainability Data Analysis</h3>
+                        <p>
+                            For the school's sustainability club, I helped analyze energy usage data across
+                            campus buildings. Made some graphs showing natural gas and electricity emissions
+                            over time. Nothing fancy, but it was useful for the club's reports.
+                        </p>
+                        <span class="other-tech">Python, Data Visualization</span>
+                    </div>
+                    <div class="other-item">
+                        <h3>Drone Engineering</h3>
+                        <p>
+                            I'm the lead technician for our school's drone team. Mostly that means fixing
+                            things when they break (which is often) and helping set up for competitions.
+                            The team's ranked #1 nationally right now, which is pretty wild.
+                        </p>
+                        <span class="other-tech">Drone Tech, Team Collaboration</span>
+                    </div>
+                    <div class="other-item">
+                        <h3>AI/ML Independent Study</h3>
+                        <p>
+                            This year I'm doing an independent study on AI and machine learning. Still
+                            in the early stages—learning the math behind neural networks and working
+                            through some tutorials. Hoping to build something real with it soon.
+                        </p>
+                        <span class="other-tech">Python, Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Made by Ilan Turevskiy</p>
+                <div class="footer-links">
+                    <a href="https://github.com/IlanTurevsky" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ilan-turevskiy-716212394/" target="_blank">LinkedIn</a>
+                    <a href="mailto:turevskiyil@belmonthill.org">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
