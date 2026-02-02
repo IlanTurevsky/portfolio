@@ -985,21 +985,31 @@ a {
 
 .project-card-alt-media {
     position: relative;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+    max-width: 320px;
+    opacity: 0.85;
 }
 
 .project-card-alt-media:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    opacity: 1;
 }
 
 .project-card-alt-media img,
 .project-card-alt-media video {
     width: 100%;
     display: block;
+    filter: grayscale(20%);
+    transition: filter 0.4s ease;
+}
+
+.project-card-alt-media:hover img,
+.project-card-alt-media:hover video {
+    filter: grayscale(0%);
 }
 
 .view-project-btn {
