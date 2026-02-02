@@ -434,7 +434,113 @@ a {
     }
 }
 
-/* ===== Featured Work ===== */
+/* ===== Featured Work (Compact) ===== */
+.featured-compact {
+    padding: 60px 0;
+    background: var(--color-bg-alt);
+}
+
+.featured-compact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.featured-compact-card {
+    display: block;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.featured-compact-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+}
+
+.featured-compact-image {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.featured-compact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.featured-compact-card:hover .featured-compact-image img {
+    transform: scale(1.08);
+}
+
+.featured-compact-info {
+    padding: 16px;
+}
+
+.featured-compact-info h3 {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.featured-compact-info span {
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.featured-cta {
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .featured-compact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-compact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Tilting Card Effect ===== */
+.tilt-card {
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    will-change: transform;
+}
+
+.tilt-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Add depth to skill groups for tilt effect */
+.skill-group.tilt-card {
+    background: white;
+    padding: 28px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+.skill-group.tilt-card h3 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    color: var(--color-accent);
+}
+
+/* ===== Legacy Featured Work ===== */
 .featured {
     padding: 60px 0 80px;
     background: var(--color-bg-alt);
@@ -823,92 +929,110 @@ a {
     margin-top: auto;
 }
 
-/* ===== Projects Grid (Overview Page) ===== */
-.projects-grid-section {
+/* ===== Projects Showcase (Alternating Layout) ===== */
+.projects-showcase {
     padding: 20px 0 60px;
 }
 
-.projects-grid {
+.project-card-alt {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 60px 0;
+    border-bottom: 1px solid var(--color-border);
 }
 
-.project-card {
-    display: block;
-    background: white;
-    border: 1px solid var(--color-border);
-    overflow: hidden;
-    transition: all var(--transition);
+.project-card-alt:last-child {
+    border-bottom: none;
 }
 
-.project-card:hover {
-    border-color: var(--color-accent);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-    transform: translateY(-4px);
+.project-card-alt.reverse {
+    direction: rtl;
 }
 
-.project-card-image {
-    position: relative;
-    aspect-ratio: 16/10;
-    overflow: hidden;
+.project-card-alt.reverse > * {
+    direction: ltr;
 }
 
-.project-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
+.project-card-alt-content {
+    padding: 1rem 0;
 }
 
-.project-card:hover .project-card-image img {
-    transform: scale(1.05);
-}
-
-.project-card-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.1);
-    transition: opacity var(--transition);
-}
-
-.project-card:hover .project-card-overlay {
-    opacity: 0;
-}
-
-.project-card-content {
-    padding: 28px;
-}
-
-.project-card-category {
-    display: inline-block;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--color-accent);
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
-.project-card-content h2 {
+.project-card-alt-content h2 {
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 400;
-    margin-bottom: 12px;
-    line-height: 1.3;
+    margin-bottom: 8px;
+    line-height: 1.2;
 }
 
-.project-card-content p {
-    font-size: 0.95rem;
+.project-card-alt-content .project-date {
     color: var(--color-text-light);
     margin-bottom: 16px;
-    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
-.project-card-link {
-    font-size: 0.9rem;
-    color: var(--color-accent);
-    font-weight: 600;
+.project-card-alt-content p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: var(--color-text-light);
+}
+
+.project-card-alt-content .tech-tags {
+    margin-bottom: 24px;
+}
+
+.project-card-alt-media {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card-alt-media:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.project-card-alt-media img,
+.project-card-alt-media video {
+    width: 100%;
+    display: block;
+}
+
+.view-project-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--color-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.view-project-btn:hover {
+    background: var(--color-accent-dark);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .project-card-alt {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 0;
+    }
+
+    .project-card-alt.reverse {
+        direction: ltr;
+    }
+
+    .project-card-alt-media {
+        order: -1;
+    }
 }
 
 /* ===== Project Detail Page ===== */
