@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Ilan Turevskiy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header header-light">
+        <nav class="nav">
+            <a href="index.html" class="nav-name">Ilan Turevskiy</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="about.html">About</a>
+                <a href="about.html#contact">Contact</a>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Projects</h1>
+                <p class="page-intro">
+                    Here's a collection of things I've built over the past few years. Some turned out better
+                    than others, but each one taught me something new. I'm always working on something—these
+                    days mostly robotics and AI stuff.
+                </p>
+            </div>
+        </section>
+
+        <section class="projects-grid-section">
+            <div class="container">
+                <div class="projects-grid">
+                    <a href="prosthetic.html" class="project-card">
+                        <div class="project-card-image">
+                            <img src="images/prosthetic-preview.jpg" alt="Robotic Prosthetic Hand">
+                            <div class="project-card-overlay"></div>
+                        </div>
+                        <div class="project-card-content">
+                            <span class="project-card-category">Robotics / Hardware</span>
+                            <h2>Robotic Prosthetic Hand</h2>
+                            <p>A functional prosthetic that mimics hand movements using flex sensors and servo motors.</p>
+                            <span class="project-card-link">View Project →</span>
+                        </div>
+                    </a>
+
+                    <a href="followbot.html" class="project-card">
+                        <div class="project-card-image">
+                            <img src="images/followbot-preview.jpg" alt="Autonomous Follow Bot">
+                            <div class="project-card-overlay"></div>
+                        </div>
+                        <div class="project-card-content">
+                            <span class="project-card-category">Robotics / Autonomous</span>
+                            <h2>Autonomous Follow Bot</h2>
+                            <p>A small car that follows you around using ultrasonic sensors. My first robotics project.</p>
+                            <span class="project-card-link">View Project →</span>
+                        </div>
+                    </a>
+
+                    <a href="game.html" class="project-card">
+                        <div class="project-card-image">
+                            <img src="images/Itch.ioSS.png" alt="Published Video Game">
+                            <div class="project-card-overlay"></div>
+                        </div>
+                        <div class="project-card-content">
+                            <span class="project-card-category">Game Development</span>
+                            <h2>Published Video Game</h2>
+                            <p>A game I made during an internship, published on itch.io. My first completed game.</p>
+                            <span class="project-card-link">View Project →</span>
+                        </div>
+                    </a>
+
+                    <a href="jacobsladder.html" class="project-card">
+                        <div class="project-card-image">
+                            <img src="images/jacobsladder-preview.jpg" alt="Jacob's Ladder">
+                            <div class="project-card-overlay"></div>
+                        </div>
+                        <div class="project-card-content">
+                            <span class="project-card-category">Electronics / High Voltage</span>
+                            <h2>Jacob's Ladder</h2>
+                            <p>A high-voltage project that creates rising arcs of electricity between electrodes.</p>
+                            <span class="project-card-link">View Project →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Work -->
+        <section class="other-work">
+            <div class="container">
+                <h2>Other Stuff I've Worked On</h2>
+                <div class="other-grid">
+                    <div class="other-item">
+                        <h3>Sustainability Data Analysis</h3>
+                        <p>
+                            For the school's sustainability club, I helped analyze energy usage data across
+                            campus buildings. Made some graphs showing natural gas and electricity emissions
+                            over time. Nothing fancy, but it was useful for the club's reports.
+                        </p>
+                        <span class="other-tech">Python, Data Visualization</span>
+                    </div>
+                    <div class="other-item">
+                        <h3>Drone Engineering</h3>
+                        <p>
+                            I'm the lead technician for our school's drone team. Mostly that means fixing
+                            things when they break (which is often) and helping set up for competitions.
+                            The team's ranked #1 nationally right now, which is pretty wild.
+                        </p>
+                        <span class="other-tech">Drone Tech, Team Collaboration</span>
+                    </div>
+                    <div class="other-item">
+                        <h3>AI/ML Independent Study</h3>
+                        <p>
+                            This year I'm doing an independent study on AI and machine learning. Still
+                            in the early stages—learning the math behind neural networks and working
+                            through some tutorials. Hoping to build something real with it soon.
+                        </p>
+                        <span class="other-tech">Python, Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Made by Ilan Turevskiy</p>
+                <div class="footer-links">
+                    <a href="https://github.com/IlanTurevsky" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ilan-turevskiy-716212394/" target="_blank">LinkedIn</a>
+                    <a href="mailto:turevskiyil@belmonthill.org">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

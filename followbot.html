@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Follow Bot | Ilan Turevskiy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header header-light">
+        <nav class="nav">
+            <a href="index.html" class="nav-name">Ilan Turevskiy</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="about.html">About</a>
+                <a href="about.html#contact">Contact</a>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <article class="project-detail-page">
+            <div class="container">
+                <a href="projects.html" class="back-link">← Back to Projects</a>
+
+                <div class="project-header">
+                    <span class="project-category">Robotics / Autonomous Systems</span>
+                    <h1>Autonomous Follow Bot</h1>
+                    <p class="project-date">8th Grade (2022)</p>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-description">
+                        <p>
+                            This was my first real robotics project, back in 8th grade. The assignment was
+                            pretty open-ended—just "build something with sensors"—and I decided to make a
+                            little car that could follow me around.
+                        </p>
+                        <p>
+                            The car uses ultrasonic sensors to detect objects in front of it. I wrote some
+                            basic logic so it would turn toward the nearest object (me, hopefully) and try
+                            to maintain a certain distance. It also had obstacle avoidance so it wouldn't
+                            crash into walls.
+                        </p>
+                        <p>
+                            Looking back, the code was pretty messy and the hardware was held together with
+                            tape in some places. But it worked well enough to demo in class, and it's what
+                            got me interested in robotics in the first place. Sometimes simple projects
+                            end up being the most important ones.
+                        </p>
+
+                        <h3>How it works</h3>
+                        <ul>
+                            <li>Ultrasonic sensors scan for nearby objects</li>
+                            <li>Control logic determines which way to turn</li>
+                            <li>Motors adjust speed to maintain following distance</li>
+                            <li>Basic obstacle avoidance prevents collisions</li>
+                        </ul>
+
+                        <h3>Tech used</h3>
+                        <div class="tech-tags">
+                            <span>Arduino</span>
+                            <span>Ultrasonic Sensors</span>
+                            <span>DC Motors</span>
+                            <span>C++</span>
+                        </div>
+                    </div>
+
+                    <div class="project-media">
+                        <div class="video-container">
+                            <video muted loop playsinline class="project-video hover-video">
+                                <source src="images/followbot.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-play-hint"></div>
+                        </div>
+                        <div class="video-container" style="margin-top: 20px;">
+                            <video muted loop playsinline class="project-video hover-video">
+                                <source src="images/cartest2.mov" type="video/quicktime">
+                            </video>
+                            <div class="video-play-hint"></div>
+                        </div>
+                        <div class="video-container" style="margin-top: 20px;">
+                            <video muted loop playsinline class="project-video hover-video">
+                                <source src="images/cartest1.mov" type="video/quicktime">
+                            </video>
+                            <div class="video-play-hint"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Made by Ilan Turevskiy</p>
+                <div class="footer-links">
+                    <a href="https://github.com/IlanTurevsky" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ilan-turevskiy-716212394/" target="_blank">LinkedIn</a>
+                    <a href="mailto:turevskiyil@belmonthill.org">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

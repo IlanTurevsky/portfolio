@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob's Ladder | Ilan Turevskiy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header header-light">
+        <nav class="nav">
+            <a href="index.html" class="nav-name">Ilan Turevskiy</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="about.html">About</a>
+                <a href="about.html#contact">Contact</a>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <article class="project-detail-page">
+            <div class="container">
+                <a href="projects.html" class="back-link">← Back to Projects</a>
+
+                <div class="project-header">
+                    <span class="project-category">Electronics / High Voltage</span>
+                    <h1>Jacob's Ladder</h1>
+                    <p class="project-date">2024</p>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-description">
+                        <p>
+                            A classic high-voltage project that creates a rising arc of electricity between
+                            two diverging electrodes. The arc starts at the bottom where the electrodes are
+                            closest together, then climbs upward as the heated air rises, until it breaks
+                            at the top and restarts at the bottom.
+                        </p>
+                        <p>
+                            Built using a high-voltage transformer, this project was a great way to learn
+                            about electrical safety, high-voltage systems, and the physics of electrical
+                            arcs. The distinctive buzzing sound and visual effect make it one of the more
+                            dramatic electronics projects I've built.
+                        </p>
+
+                        <h3>How it works</h3>
+                        <ul>
+                            <li>High-voltage transformer generates thousands of volts</li>
+                            <li>Arc forms at the narrowest gap between electrodes</li>
+                            <li>Heated air rises, carrying the arc upward</li>
+                            <li>Arc breaks at the top, cycle repeats</li>
+                        </ul>
+
+                        <h3>Tech used</h3>
+                        <div class="tech-tags">
+                            <span>High Voltage</span>
+                            <span>Transformer</span>
+                            <span>Electronics</span>
+                        </div>
+                    </div>
+
+                    <div class="project-media">
+                        <div class="video-container">
+                            <video loop playsinline class="project-video hover-video">
+                                <source src="images/jacobsladder2.mov" type="video/quicktime">
+                            </video>
+                            <div class="video-play-hint has-sound"></div>
+                        </div>
+                        <div class="video-container" style="margin-top: 20px;">
+                            <video muted loop playsinline class="project-video hover-video">
+                                <source src="images/jacobsladder1.mov" type="video/quicktime">
+                            </video>
+                            <div class="video-play-hint"></div>
+                        </div>
+                        <div class="video-container" style="margin-top: 20px;">
+                            <video muted loop playsinline class="project-video hover-video">
+                                <source src="images/JacobsLadder.mov" type="video/quicktime">
+                            </video>
+                            <div class="video-play-hint"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Made by Ilan Turevskiy</p>
+                <div class="footer-links">
+                    <a href="https://github.com/IlanTurevsky" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ilan-turevskiy-716212394/" target="_blank">LinkedIn</a>
+                    <a href="mailto:turevskiyil@belmonthill.org">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

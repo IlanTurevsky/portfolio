@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilan Turevskiy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-name">Ilan Turevskiy</a>
+            <div class="nav-links">
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="about.html#contact">Contact</a>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section with Carousel -->
+        <section class="hero">
+            <div class="carousel">
+                <div class="carousel-slide active" data-project="prosthetic">
+                    <div class="carousel-bg"></div>
+                </div>
+                <div class="carousel-slide" data-project="followbot">
+                    <div class="carousel-bg"></div>
+                </div>
+                <div class="carousel-slide" data-project="game">
+                    <div class="carousel-bg"></div>
+                </div>
+                <div class="carousel-slide" data-project="jacobsladder">
+                    <div class="carousel-bg"></div>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-intro">
+                    <p class="hero-greeting">
+                        <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+                    </p>
+                    <p class="hero-subtitle">Student · Builder · Problem Solver</p>
+                    <h1 class="hero-title">
+                        <span class="carousel-title active" data-index="0">Robotic Prosthetic Hand</span>
+                        <span class="carousel-title" data-index="1">Autonomous Follow Bot</span>
+                        <span class="carousel-title" data-index="2">Published Video Game</span>
+                        <span class="carousel-title" data-index="3">Jacob's Ladder</span>
+                    </h1>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="projects.html" class="btn-explore">Explore My Work</a>
+                    <a href="about.html" class="btn-secondary">Learn About Me</a>
+                </div>
+            </div>
+
+            <div class="hero-scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-arrow"></div>
+            </div>
+
+            <div class="carousel-nav">
+                <button class="carousel-dot active" data-index="0"></button>
+                <button class="carousel-dot" data-index="1"></button>
+                <button class="carousel-dot" data-index="2"></button>
+                <button class="carousel-dot" data-index="3"></button>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="intro">
+            <div class="container">
+                <div class="intro-content">
+                    <h2>Hey, I'm Ilan.</h2>
+                    <p>
+                        I'm a sophomore at Belmont Hill School, and I spend most of my free time tinkering with robots,
+                        writing code, and figuring out how to make things work. I got into tech because I was always
+                        curious about what makes stuff tick—that curiosity eventually turned into building actual projects.
+                    </p>
+                    <p>
+                        Right now I'm working on a prosthetic hand that uses flex sensors to mimic finger movements.
+                        It's still a work in progress (lots of trial and error), but I'm learning a ton along the way.
+                        I'm also part of our school's drone team, which has been pretty cool—we're currently ranked
+                        first nationally, though honestly that's more of a team effort than anything I did alone.
+                    </p>
+                    <a href="about.html" class="link-arrow">More about me →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights Section -->
+        <section class="highlights">
+            <div class="container">
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <span class="highlight-number" data-count="3">0</span>
+                        <span class="highlight-label">Years Coding</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">#1</span>
+                        <span class="highlight-label">National Drone Team</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number" data-count="1">0</span>
+                        <span class="highlight-label">Published Game</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">HMS</span>
+                        <span class="highlight-label">Research Collaboration</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work -->
+        <section class="featured">
+            <div class="container">
+                <h2 class="section-heading">Featured Work</h2>
+
+                <div class="featured-grid">
+                    <a href="prosthetic.html" class="featured-card">
+                        <div class="featured-image">
+                            <img src="images/prosthetic-preview.jpg" alt="Robotic Prosthetic Hand">
+                            <div class="featured-overlay"></div>
+                        </div>
+                        <div class="featured-info">
+                            <h3>Robotic Prosthetic Hand</h3>
+                            <p>A functional prosthetic that mimics hand movements using flex sensors and servo motors. Still working on adding EMG sensor control.</p>
+                            <span class="featured-link">View Project →</span>
+                        </div>
+                    </a>
+
+                    <a href="followbot.html" class="featured-card">
+                        <div class="featured-image">
+                            <img src="images/followbot-preview.jpg" alt="Autonomous Follow Bot">
+                            <div class="featured-overlay"></div>
+                        </div>
+                        <div class="featured-info">
+                            <h3>Autonomous Follow Bot</h3>
+                            <p>An 8th grade project that got me into robotics—a small car that follows you around using sensors. Simple but I was pretty proud of it.</p>
+                            <span class="featured-link">View Project →</span>
+                        </div>
+                    </a>
+
+                    <a href="game.html" class="featured-card">
+                        <div class="featured-image">
+                            <img src="images/Itch.ioSS.png" alt="Published Video Game on itch.io">
+                            <div class="featured-overlay"></div>
+                        </div>
+                        <div class="featured-info">
+                            <h3>Published Video Game</h3>
+                            <p>Made a game during an internship last year. Nothing crazy, but it's actually playable and people can download it online.</p>
+                            <span class="featured-link">View Project →</span>
+                        </div>
+                    </a>
+
+                    <a href="jacobsladder.html" class="featured-card">
+                        <div class="featured-image">
+                            <img src="images/jacobsladder-preview.jpg" alt="Jacob's Ladder">
+                            <div class="featured-overlay"></div>
+                        </div>
+                        <div class="featured-info">
+                            <h3>Jacob's Ladder</h3>
+                            <p>A high-voltage electronics project that creates rising arcs of electricity. One of the more dramatic builds I've done.</p>
+                            <span class="featured-link">View Project →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="quick-links">
+            <div class="container">
+                <div class="links-grid">
+                    <a href="projects.html" class="link-card">
+                        <span class="link-number">01</span>
+                        <h3>Projects</h3>
+                        <p>Robotics, games, and everything I've built</p>
+                    </a>
+                    <a href="about.html" class="link-card">
+                        <span class="link-number">02</span>
+                        <h3>About</h3>
+                        <p>Who I am, what I do, where I'm headed</p>
+                    </a>
+                    <a href="about.html#contact" class="link-card">
+                        <span class="link-number">03</span>
+                        <h3>Contact</h3>
+                        <p>Get in touch—I'd love to hear from you</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Made by Ilan Turevskiy</p>
+                <div class="footer-links">
+                    <a href="https://github.com/IlanTurevsky" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ilan-turevskiy-716212394/" target="_blank">LinkedIn</a>
+                    <a href="mailto:turevskiyil@belmonthill.org">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
