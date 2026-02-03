@@ -337,10 +337,16 @@ function initCustomCursor() {
     animateCursor();
 
     // Hover effects on interactive elements
-    const hoverElements = document.querySelectorAll('a, button, .featured-card, .link-card, .other-item, .research-card, .contact-card, video, .video-container');
+    const hoverElements = document.querySelectorAll('a, button, .featured-card, .link-card, .other-item, .research-card, .contact-card, video, .video-container, .tilt-card, .project-card-alt-media');
     hoverElements.forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        el.addEventListener('mouseenter', () => {
+            cursor.classList.add('hover');
+            dot.classList.add('hover');
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hover');
+            dot.classList.remove('hover');
+        });
     });
 
     // Click effect
