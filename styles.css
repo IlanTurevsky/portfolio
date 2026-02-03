@@ -1005,6 +1005,10 @@ a {
     display: block;
     filter: grayscale(20%);
     transition: filter 0.4s ease;
+    border-radius: 8px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    background: #000;
 }
 
 .project-card-alt-media:hover img,
