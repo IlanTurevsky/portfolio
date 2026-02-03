@@ -914,10 +914,13 @@ a {
 }
 
 .project-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.project-content .project-description {
+    max-width: 800px;
 }
 
 .project-description p {
@@ -976,13 +979,21 @@ a {
 }
 
 .project-media {
-    position: sticky;
-    top: 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+.project-media .video-container {
+    margin-top: 0 !important;
 }
 
 .project-video {
     width: 100%;
-    border-radius: 4px;
+    border-radius: 8px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
 }
 
 .media-placeholder {
@@ -1758,13 +1769,11 @@ body.has-custom-cursor video {
     }
 
     .project-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
     .project-media {
-        position: relative;
-        top: 0;
-        order: -1;
+        grid-template-columns: 1fr;
     }
 
     .bio-content {
