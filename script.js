@@ -371,18 +371,16 @@ function initVideoHoverPlay() {
     const videos = document.querySelectorAll('video');
 
     videos.forEach(video => {
-        // Remove autoplay and set to paused by default
         video.autoplay = false;
         video.pause();
         video.currentTime = 0;
         video.classList.add('hover-video');
 
-        // Check if this is the jacobsladder2 video (the only one with sound)
         const source = video.querySelector('source');
-        const isJacobsLadder2 = source && source.src.includes('jacobsladder2');
+        const isJacobsLadder3 = source && source.src.includes('jacobsladder3');
 
-        // Mute all videos except jacobsladder2
-        if (!isJacobsLadder2) {
+        // Mute all videos except jacobsladder3
+        if (!isJacobsLadder3) {
             video.muted = true;
         } else {
             video.muted = false;
@@ -398,12 +396,20 @@ function initVideoHoverPlay() {
             container.appendChild(video);
         }
 
+        // Detect vertical vs horizontal and add class
+        video.addEventListener('loadedmetadata', () => {
+            if (video.videoHeight > video.videoWidth) {
+                container.classList.add('vertical');
+            } else {
+                container.classList.add('horizontal');
+            }
+        });
+
         // Add play hint if not exists
         if (!container.querySelector('.video-play-hint')) {
             const hint = document.createElement('div');
             hint.className = 'video-play-hint';
-            // Add sound icon for jacobsladder2
-            if (isJacobsLadder2) {
+            if (isJacobsLadder3) {
                 hint.classList.add('has-sound');
             }
             container.appendChild(hint);
