@@ -1650,6 +1650,16 @@ body.has-custom-cursor video {
     opacity: 0;
 }
 
+/* Show play hint on touch devices */
+@media (hover: none) {
+    .video-play-hint {
+        opacity: 1;
+    }
+    .hover-video {
+        opacity: 1;
+    }
+}
+
 /* Sound indicator for videos with audio */
 .video-play-hint.has-sound::before {
     content: '🔊';

@@ -415,7 +415,7 @@ function initVideoHoverPlay() {
             container.appendChild(hint);
         }
 
-        // Play on hover
+        // Play on hover (desktop)
         container.addEventListener('mouseenter', () => {
             video.play();
             container.classList.add('playing');
@@ -424,6 +424,17 @@ function initVideoHoverPlay() {
         container.addEventListener('mouseleave', () => {
             video.pause();
             container.classList.remove('playing');
+        });
+
+        // Tap to play/pause (mobile)
+        container.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                container.classList.add('playing');
+            } else {
+                video.pause();
+                container.classList.remove('playing');
+            }
         });
     });
 }
